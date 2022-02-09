@@ -1,5 +1,5 @@
-import 'package:attendence_management_system/pages/appBarWidget.dart';
-import 'package:attendence_management_system/pages/textFeildWidget.dart';
+import 'package:attendence_management_system/widgets/appBarWidget.dart';
+import 'package:attendence_management_system/widgets/textFeildWidget.dart';
 import 'package:attendence_management_system/utils/userPrefrences.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,27 @@ class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context) {
     final user = UserPrefrences.myUser;
-
+//
+// TextField(
+                      //   obscureText: _isObscure,
+                      //   decoration: InputDecoration(
+                      //     border: OutlineInputBorder(
+                      //         borderRadius: BorderRadius.circular(15)),
+                      //     labelText: 'Password',
+                      //     hintText: 'Password',
+                      //     suffixIcon: IconButton(
+                      //       icon: Icon(_isObscure
+                      //           ? Icons.visibility_off_sharp
+                      //           : Icons.visibility_sharp),
+                      //       onPressed: () {
+                      //         setState(() {
+                      //           _isObscure = !_isObscure;
+                      //         });
+                      //       },
+                      //     ),
+                      //   ),
+                      // ),
+//
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(),
@@ -27,6 +47,7 @@ class _ChangePasswordState extends State<ChangePassword> {
             height: 30,
           ),
           TextFieldWidget(
+      
             label: "Current Password",
             text: "", //Change it to password
             onChanged: (pass) {},

@@ -1,5 +1,5 @@
-import 'package:attendence_management_system/pages/editProfilePhotoWidget.dart';
-import 'package:attendence_management_system/pages/textFeildWidget.dart';
+import 'package:attendence_management_system/widgets/editProfilePhotoWidget.dart';
+import 'package:attendence_management_system/widgets/textFeildWidget.dart';
 import 'package:attendence_management_system/utils/userPrefrences.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
            const SizedBox(height: 25,),
           TextFieldWidget(
             label: "Username",
-            text: user.name,
+            text: user.facultyName,
             onChanged: (name) {},
             
           ),
@@ -57,7 +57,18 @@ class _EditProfilePageState extends State<EditProfilePage> {
             onChanged: (DOB) {},
             
           ),
-          
+          SizedBox(height: 20,),
+          Center(
+            child: ElevatedButton(onPressed: () =>{}, child: 
+              Text("Confirm"),
+               style: ElevatedButton.styleFrom(
+              shape: new RoundedRectangleBorder(
+            borderRadius: new BorderRadius.circular(10.0)
+            ),
+      fixedSize: Size(300, 60), 
+               )
+            ),
+            )
           ],
           )
     );
