@@ -13,8 +13,8 @@ class FacultyPage extends StatefulWidget {
 }
 
 class _FacultyPageState extends State<FacultyPage> {
-  final user = UserPrefrences.myUser;
-  // final List<Faculty> user = UserPrefrences.sample;
+  // final user = UserPrefrences.myUser;
+  final List<Faculty> user = UserPrefrences.FacultyList;
 // var use2 = user.asMap();
   @override
   Widget build(BuildContext context) {
@@ -36,8 +36,8 @@ class _FacultyPageState extends State<FacultyPage> {
             Expanded(
               child: new ListView.builder(
                   itemCount: 
-                  Faculties.length,
-                  // UserPrefrences.sample.length,
+                  // Faculties.length,
+                  user.length,
                   itemBuilder: (BuildContext context, int index) =>
                       buildFacultyCard(context, index)),
             )
@@ -78,7 +78,7 @@ class _FacultyPageState extends State<FacultyPage> {
               SizedBox(
                 width: 10,
               ),
-              ProfileWidget(imagePath: user.imagePath, size: 64),
+              ProfileWidget(imagePath: user[index].imagePath, size: 64),
               SizedBox(
                 width: 10,
               ),
@@ -86,12 +86,12 @@ class _FacultyPageState extends State<FacultyPage> {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      user.facultyName,
+                      user[index].facultyName,
                       style: TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 20.0),
                     ),
                     Text(
-                      user.facultyId,
+                      user[index].facultyId,
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.grey,

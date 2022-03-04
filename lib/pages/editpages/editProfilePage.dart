@@ -1,3 +1,4 @@
+import 'package:attendence_management_system/pages/bottomNavBar.dart';
 import 'package:attendence_management_system/widgets/editProfilePhotoWidget.dart';
 import 'package:attendence_management_system/widgets/textFeildWidget.dart';
 import 'package:attendence_management_system/utils/userPrefrences.dart';
@@ -59,7 +60,11 @@ class _EditProfilePageState extends State<EditProfilePage> {
           ),
           SizedBox(height: 20,),
           Center(
-            child: ElevatedButton(onPressed: () =>{}, child: 
+            child: ElevatedButton(onPressed: () =>{Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => LoginNavScreen()),
+      
+               (route)=>false, ),
+                }, child: 
               Text("Confirm"),
                style: ElevatedButton.styleFrom(
               shape: new RoundedRectangleBorder(

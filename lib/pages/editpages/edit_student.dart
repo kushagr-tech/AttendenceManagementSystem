@@ -1,6 +1,8 @@
 import 'package:attendence_management_system/widgets/textfieldwidgetform.dart';
 import 'package:flutter/material.dart';
 
+import '../bottomNavBar.dart';
+
 class EditStud extends StatefulWidget {
   const EditStud({Key? key}) : super(key: key);
 
@@ -104,7 +106,12 @@ class _EditStudState extends State<EditStud> {
             ),
             SizedBox(height: 20,),
             Center(
-            child: ElevatedButton(onPressed: () =>{}, child: 
+            child: ElevatedButton(onPressed: () =>{Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => AdminNavScreen()),
+      
+               (route)=>false, ),
+                
+            }, child: 
               Text("Confirm"),
                style: ElevatedButton.styleFrom(
               shape: new RoundedRectangleBorder(

@@ -1,6 +1,8 @@
+import 'package:attendence_management_system/model/userDetailModel.dart';
 import 'package:attendence_management_system/pages/addpages/add_faculty.dart';
 import 'package:attendence_management_system/pages/editpages/edit_faculty.dart';
 import 'package:attendence_management_system/utils/names.dart';
+import 'package:attendence_management_system/utils/userPrefrences.dart';
 import 'package:flutter/material.dart';
 
 class FacultyDetailsPage extends StatefulWidget {
@@ -11,6 +13,8 @@ class FacultyDetailsPage extends StatefulWidget {
 }
 
 class _FacultyDetailsPageState extends State<FacultyDetailsPage> {
+    final List<Faculty> user = UserPrefrences.FacultyList;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +24,7 @@ class _FacultyDetailsPageState extends State<FacultyDetailsPage> {
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: new ListView.builder(
-            itemCount: Faculties.length,
+            itemCount: user.length,
             itemBuilder: (BuildContext context, int index) =>
                 buildFacultyDetailsCard(context, index)),
       ),
@@ -48,7 +52,6 @@ class _FacultyDetailsPageState extends State<FacultyDetailsPage> {
   }
 
   buildFacultyDetailsCard(BuildContext context, int index) {
-        List<bool> isActive = FacultiesisActive;
     var index2 = index + 1;
     return new Container(
       child: Card(
@@ -68,16 +71,16 @@ class _FacultyDetailsPageState extends State<FacultyDetailsPage> {
                       child: Column(
                     children: <Widget>[
                       Text(
-                        FacultiesID[0].toString(),
+                        user[index].facultyId,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20.0),
                       ),
                       Text(
-                        Faculties[index],
+                        user[index].facultyName,
                         style: TextStyle(fontSize: 15.0),
                       ),
                       Text(
-                        StudentEmail[0],
+                        user[0].email,
                         style: TextStyle(fontSize: 15.0),
                       ),
                       Row(
@@ -85,11 +88,12 @@ class _FacultyDetailsPageState extends State<FacultyDetailsPage> {
                           SizedBox(width: 25,),
                           Expanded(
                             child: Text(
-                              PhoneNo[0],
+                              user[0].phoneNo,
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 17.0),
                             ),
                           ),
+//?????????????????????????????????????????????????????????????????????????????????????????????????                       
                           Expanded(
                             child: Text(
                               "Sem : " + Semester[0],
@@ -105,14 +109,15 @@ class _FacultyDetailsPageState extends State<FacultyDetailsPage> {
                       ),
                     ],
                   )),
+//?????????????????????????????????????????????????????????????????????????????????????????????????
                   Column(
                     children: [
                       Text("Status"),
                       Switch(
-                          value: isActive[index],
+                          value: user[index].isActive,
                           onChanged: (bool newValue) {
                             setState(() {
-                              isActive[index] = !isActive[index];
+                              user[index].isActive = !user[index].isActive;
                             });
                           },
                         ),

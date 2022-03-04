@@ -188,7 +188,6 @@ List<String> Faculties = [
   "Ashish bansal",
   "Manish Khule",
 ];
-
 List<int> isSelectedList = [
   0,
   0,
@@ -229,7 +228,6 @@ List attendencecolor = [
   Colors.white,
   Colors.white,
 ];
-
   //  0, /*Absent*/    1, /*Present*/    2 /*Absent*/
     String semesterdropdownValue = Semester[0];
     String batchdropdownValue = Batch[0];
@@ -238,9 +236,7 @@ List attendencecolor = [
     String yeardropdownValue = CollegeYear[0];
     String programdropdownValue = Program[0];
     String branchdropdownValue = Branch[0];
-    String facultiesdropdownValue = Faculties[0];
-
-       
+    String facultiesdropdownValue = Faculties[0];   
     Map<String,String> values = {
       programdropdownValue:"MBA",
       semesterdropdownValue:"1",

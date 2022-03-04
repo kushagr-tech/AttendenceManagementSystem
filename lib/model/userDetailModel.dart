@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: non_constant_identifier_names
 
 class Faculty{
     final String imagePath;
@@ -10,9 +10,9 @@ class Faculty{
     final String DOB;
     final String subject;
 
-    final bool isActive;
+    bool isActive;
 
-    const Faculty({
+     Faculty({
       required this.imagePath, 
       required this.facultyName, 
       required this.facultyId, 
@@ -32,9 +32,9 @@ class Student{
     final String batch;
     final String branch;
     final String studingInYear;
-    final bool isActive;
+    bool isActive;
 
-    const Student({
+     Student({
       required this.studentEnrollmentNo, 
       required this.studentName, 
       required this.studentemail, 
@@ -46,19 +46,21 @@ class Student{
       this.isActive = true,
 });
 }
-class Attendence{
-  final String date;
-  final String subject;
-  final String semester;
-  final String studentEnrollment;
-  final String status;
-  final String time;
-  const Attendence({
-    required this.semester,
-    required this.date,
-    required this.status,
-    required this.studentEnrollment,
-    required this.subject,
-    required this.time
-  });
-}
+// class Attendence{
+//   final String date;
+//   final String subject;
+//   final String semester;
+//   final String studentEnrollment;
+//   final String status;
+//   final String time;
+//      -----------------student list 
+//     array and objects of students
+//   const Attendence({
+//     required this.semester,
+//     required this.date,
+//     required this.status,
+//     required this.studentEnrollment,
+//     required this.subject,
+//     required this.time
+//   });
+// }

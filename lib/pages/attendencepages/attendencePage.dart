@@ -1,6 +1,9 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:attendence_management_system/pages/bottomNavBar.dart';
 import 'package:attendence_management_system/theme/colors.dart';
 import 'package:attendence_management_system/utils/names.dart';
+import 'package:attendence_management_system/utils/userPrefrences.dart';
 import 'package:flutter/material.dart';
 import 'package:focused_menu/focused_menu.dart';
 import 'package:focused_menu/modals.dart';
@@ -13,7 +16,7 @@ class AttendencePage extends StatefulWidget {
 }
 
 class _AttendencePageState extends State<AttendencePage> {
-  // ignore: non_constant_identifier_names
+    final studentvar = UserPrefrences.studentlist;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +47,7 @@ class _AttendencePageState extends State<AttendencePage> {
             width: 400,
             // color: Colors.orange,
             child: new ListView.builder(
-                itemCount: Students.length,
+                itemCount: studentvar.length,
                 itemBuilder: (BuildContext context, int index) =>
                     buildAttendenceCard(context, index)),
             // ListTile(
@@ -71,8 +74,8 @@ class _AttendencePageState extends State<AttendencePage> {
                   TextButton(
                     onPressed: () => {
                       ResetState(),
-                      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => LoginNavScreen()),)
+                      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => LoginNavScreen()),(route)=>false)
                     },
                     child: const Text('Submit'),
                   ),
@@ -200,7 +203,7 @@ class _AttendencePageState extends State<AttendencePage> {
                   width: 25,
                 ),
                 Text(
-                  Students[index],
+                  studentvar[index].studentName,
                   style: TextStyle(fontSize: 20),
                 ),
               ],

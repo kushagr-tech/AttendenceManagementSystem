@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:attendence_management_system/pages/addpages/add_faculty.dart';
 import 'package:attendence_management_system/pages/addpages/add_student.dart';
 import 'package:attendence_management_system/pages/loginpages/logout.dart';

@@ -12,7 +12,7 @@ class StudentDetailsPage extends StatefulWidget {
 }
 
 class _StudentDetailsPageState extends State<StudentDetailsPage> {
-    final studentvar = UserPrefrences.student;
+    final studentvar = UserPrefrences.studentlist;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,9 @@ class _StudentDetailsPageState extends State<StudentDetailsPage> {
           Padding(
         padding: const EdgeInsets.all(8.0),
         child: new ListView.builder(
-            itemCount: Students.length,
+            itemCount:
+            // 150, 
+            studentvar.length,
             itemBuilder: (BuildContext context, int index) =>
                 buildStudentDetailsCard(context, index)),
       ),
@@ -77,20 +79,20 @@ class _StudentDetailsPageState extends State<StudentDetailsPage> {
                     child: Column(
                       children: <Widget>[
                         Text(
-                        // studentvar.studentEnrollmentNo,
-                        Enrollment[index],
+                        studentvar[index].studentEnrollmentNo,
+                        // Enrollment[index],
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20.0),
                         ),
                         Text(
-                          // studentvar.studentName,
-                          Students[index],
+                          studentvar[index].studentName,
+                          // Students[index],
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 17.0),
                         ),
                         Text(
-                          // studentvar.studentemail,
-                          StudentEmail[index],
+                          studentvar[index].studentemail,
+                          // StudentEmail[index],
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 13.0),
                         ),
@@ -131,23 +133,23 @@ class _StudentDetailsPageState extends State<StudentDetailsPage> {
                   Expanded(
                     child: Column(
                       children: [
-                        Text("Program : " + studentvar.program,style: TextStyle(fontSize: 13),),
-                        Text("Batch : " + studentvar.batch,style: TextStyle(fontSize: 13),)
+                        Text("Program : " + studentvar[index].program,style: TextStyle(fontSize: 13),),
+                        Text("Batch : " + studentvar[index].batch,style: TextStyle(fontSize: 13),)
                       ],
                     ),
                   ),
                   Expanded(
                     child: Column(
                       children: [
-                        Text("Branch : " + studentvar.branch,style: TextStyle(fontSize: 13),),
-                        Text("Semester : " + studentvar.semester,style: TextStyle(fontSize: 13),)
+                        Text("Branch : " + studentvar[index].branch,style: TextStyle(fontSize: 13),),
+                        Text("Semester : " + studentvar[index].semester,style: TextStyle(fontSize: 13),)
                       ],
                     ),
                   ),
                   Expanded(
                     child: Column(
                       children: [
-                        Text("Year : " + studentvar.studingInYear,style: TextStyle(fontSize: 13),),
+                        Text("Year : " + studentvar[index].studingInYear,style: TextStyle(fontSize: 13),),
                       ],
                     ),
                   ),

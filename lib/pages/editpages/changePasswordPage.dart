@@ -3,6 +3,8 @@ import 'package:attendence_management_system/widgets/textFeildWidget.dart';
 import 'package:attendence_management_system/utils/userPrefrences.dart';
 import 'package:flutter/material.dart';
 
+import '../bottomNavBar.dart';
+
 class ChangePassword extends StatefulWidget {
   const ChangePassword({Key? key}) : super(key: key);
 
@@ -72,7 +74,13 @@ class _ChangePasswordState extends State<ChangePassword> {
             height: 30,
           ),
           Center(
-            child: ElevatedButton(onPressed: () =>{}, child: 
+            child: ElevatedButton(
+              
+              onPressed: () =>{Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => LoginNavScreen()),
+      
+               (route)=>false, ),
+                }, child: 
               Text("Confirm"),
                style: ElevatedButton.styleFrom(
               shape: new RoundedRectangleBorder(
