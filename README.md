@@ -4,12 +4,12 @@ A Flutter project.
 
 ## Getting Started
 
-This project was a collaborative work of a team of 8 people from different disciplines and this project was made for the university use .
-This github reppo is for display purposes only .
+This project was a joint effort by a group of eight individuals from numerous domains, and it was developed for university usage. 
+This github repo is just for demonstration purposes. 
 
-My contribution to this project as a mobile app development head was to maintain the work flow as needed , develop the app as soon as possible , as efficient as it can be , to manage the team we had on our side and to prevent clashes and miscommunication .
+My role as a mobile app development lead on this project was to keep the work flow going as needed, create the app as quickly as feasible and as efficiently as possible, manage the team we had on hand, as well as avoid conflicts and misunderstandings. 
 
-We used the following Technologies to carry our work forward
+To move our project ahead, we utilised the following technologies.
   1. Flutter / Dart
   2. Mongodb
   3. Reactjs
