@@ -18,7 +18,7 @@ We used the following Technologies to carry our work forward
   6. Expressjs
   7. Rest API 
 
-Following are the screenshots of some of the screens!
+## Following are the screenshots of some of the screens!
 ![Simulator Screen Shot - iPhone 13 Pro Max - 2022-04-19 at 00 09 31](https://user-images.githubusercontent.com/56469253/163857920-6fc26d24-bf29-4343-a5ea-1a031aea6b2d.png)
 ![Simulator Screen Shot - iPhone 13 Pro Max - 2022-04-19 at 00 09 38](https://user-images.githubusercontent.com/56469253/163857912-571d1ce6-84aa-47f1-85b0-9ea03e606d95.png)
 ![Simulator Screen Shot - iPhone 13 Pro Max - 2022-04-19 at 00 09 42](https://user-images.githubusercontent.com/56469253/163857902-633e8715-3310-40be-80d4-61197a8d3023.png)
